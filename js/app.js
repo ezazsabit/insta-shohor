@@ -4,6 +4,7 @@ const likedPostsId = [];
 const reportedPostsId = [];
 
 const getLikedPosts = () => {
+   
     return posts.filter((post) => likedPostsId.includes(post.id));
 };
 
@@ -22,7 +23,14 @@ const addToLiked = (id) => {
 
 const reportPost = (id) => {
     reportedPostsId.push(id);
-    const remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
+    console.log(id)
+    for(const post of posts )
+    {
+      id===post.id && posts.filter(post=>post.id!=id)
+    }
+    console.log(posts)
+    remainingPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
+    //console.log(remainingPosts)
     showPosts(remainingPosts);
 };
 
@@ -41,7 +49,7 @@ const switchTab = (id) => {
         document.getElementById( "reported" ).style.display = "none";
 
         displayLikedPosts();
-    } else {
+    }else  {
        
         document.getElementById( "reported" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";

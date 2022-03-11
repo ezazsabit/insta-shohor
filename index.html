@@ -77,6 +77,16 @@
                 <h1>Reported posts</h1>
             </div>
         </main>
+        <section class="container flex flex-wrap">
+            <h3>Q: How does JS work ? </h3>
+            <p>JS stands for the short form of Java Script.As JS is an interpreted programming language,we can use dynamic typing through string templates.JS is a single threated language. So it can manage only one code at a time. JS Script can be run on a browser through a JS Engine ,in chrome which in V8. JS is asynchronous.The execution of JS is quite fast because ,no block codes haven't wait for the execution of the previous one.The codes execute by itself,by when the previous code is being processed and execute after the processing by itself.</p>
+            <h3>Q: What does event loop do?</h3>
+            <p>The event loop is the process by which we can under-stand that how JS executes asynchronously.How JS collect the event and process the event.In event loop we use stack or call stack and queue.Normal codes are stay in stack where the asynchronous components stay in queue.As JS is single threated ,it means that it can execute only one block of code at a time one by one.But some-times when we use use some asynchronous function as like...setTimeOut() , fetch(), setInterval(), async await..etc. the code runs asynchronously.At first all function or element stay in stack,but it see asynchronous function in any element,the element transfered from stack to event table.If we set the time for the execution of asynchronous function,the function go to the queue after the certain time and wait for executing the last element of stack.When all statement from  call stack in finished,event loop will pop the statement from the event queue and push it to the call stack and then execute it.</p>
+            <h3>Q: What does local and session storage do?</h3>
+            <p>When a web page executes <b>session storage</b> can take place for storing some data of the user which stable for the time of the session only.And after the session we can't find the value of data in session storage.It can store data in the form of name-value(Ex. Fruit--Mango). <br>
+            The <b>local storage</b> acts quite similar as session storage but it contails the data for a long time and if we close the tab or browser,it can't hamper the data of local storage.The data won't lost. When we open the browser we can found the previous data in our local storage.Also we can erase data from the local storage manually. <br>
+            We can set data,get data or remove data from the local and session storage by the method setItem(), getItem() and removeItem(). </p>
+        </section>
         <footer></footer>
 
         <!-- add javascript  file  -->
